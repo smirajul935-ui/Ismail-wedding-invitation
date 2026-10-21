@@ -15,16 +15,13 @@
 </head>
 <body data-lang="bn">
 
-<!-- ============ PRELOADER ============ -->
 <div class="preloader" id="preloader" aria-hidden="true">
   <div class="pre-mark latin">I<span class="amp">&amp;</span>T</div>
   <div class="pre-line"><i></i></div>
 </div>
 
-<!-- ============ PETALS ============ -->
 <canvas id="petals" aria-hidden="true"></canvas>
 
-<!-- ============ SHARED SVG DEFS + FIGURES ============ -->
 <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="gWarm" x1="0" y1="0" x2="0" y2="1">
@@ -48,15 +45,10 @@
       <stop offset="0" stop-color="#ffcf8a" stop-opacity=".8"/>
       <stop offset="100%" stop-color="#ffcf8a" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f8e5b8"/><stop offset="50%" stop-color="#dfb463"/><stop offset="100%" stop-color="#a9832f"/>
-    </linearGradient>
     <filter id="fSoft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="12"/></filter>
     <filter id="fDof" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="5"/></filter>
-    <filter id="fDofSm" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="2.2"/></filter>
   </defs>
 
-  <!-- silhouette figures -->
   <symbol id="sil-groom" viewBox="0 0 200 460">
     <path d="M100 26c-19 0-34 15-34 34s15 35 34 35 34-16 34-35-15-34-34-34z"/>
     <path d="M66 52c-2-19 15-34 34-34s36 15 34 34c-12-11-56-11-68 0z"/>
@@ -87,18 +79,6 @@
       <circle cx="40" cy="14" r="3.4"/><circle cx="100" cy="22" r="3"/><circle cx="160" cy="26" r="3.6"/>
       <circle cx="220" cy="26" r="3"/><circle cx="280" cy="22" r="3.4"/><circle cx="340" cy="14" r="3"/>
     </g>
-  </symbol>
-
-  <!-- ornate portrait figures for the welcome page -->
-  <symbol id="fig-groom" viewBox="0 0 100 220">
-    <path d="M50 12c-9 0-16 7-16 16 0 10 7 18 16 18s16-8 16-18c0-9-7-16-16-16z"/>
-    <path d="M33 22c-1-9 7-16 17-16s18 7 17 16c-6-5-28-5-34 0z"/>
-    <path d="M44 44h12v10H44z"/>
-    <path d="M50 52C38 52 30 57 24 64 14 74 9 104 6 180v40h88v-40c-3-76-8-106-18-116-6-7-14-12-26-12z"/>
-  </symbol>
-  <symbol id="fig-bride" viewBox="0 0 100 220">
-    <path d="M50 12c-8 0-14 6-14 14s6 15 14 15 14-7 14-15-6-14-14-14z"/>
-    <path d="M50 18c-15 0-25 12-27 31-3 27-1 60 2 91 2 24 4 56 5 80h40c1-24 3-56 5-80 3-31 5-64 2-91C75 30 65 18 50 18z"/>
   </symbol>
 
   <symbol id="corner-flourish" viewBox="0 0 100 100">
@@ -135,9 +115,7 @@
   </symbol>
 </svg>
 
-<!-- =====================================================
-     PAGE 1 — WELCOME
-     ===================================================== -->
+<!-- ============ PAGE 1 · WELCOME ============ -->
 <section class="welcome" id="welcome">
   <span class="glow-orb g1" aria-hidden="true"></span>
   <span class="glow-orb g2" aria-hidden="true"></span>
@@ -151,7 +129,7 @@
       <figure class="portrait portrait--groom">
         <div class="portrait-frame">
           <img class="portrait-img" src="assets/images/groom.png" alt="Ismail Ali Shah — the groom" />
-          <svg class="portrait-svg" viewBox="0 0 300 400" role="img" aria-label="Stylised gold portrait of the groom">
+          <svg class="portrait-svg" viewBox="0 0 300 400" role="img" aria-label="Gold line art portrait of the groom">
             <defs><clipPath id="groomArch"><path d="M40 366V150a110 110 0 0 1 220 0v216z"/></clipPath></defs>
             <path class="arch-fill" d="M40 366V150a110 110 0 0 1 220 0v216z"/>
             <g clip-path="url(#groomArch)">
@@ -176,10 +154,6 @@
             </g>
             <path class="arch-line" d="M40 366V150a110 110 0 0 1 220 0v216"/>
             <path class="arch-line arch-line--in" d="M50 366V152a100 100 0 0 1 200 0v214"/>
-            <g class="sprig">
-              <path d="M52 372q-14-8-24-2M52 372q-4-16-16-20"/>
-              <path d="M248 372q14-8 24-2M248 372q4-16 16-20"/>
-            </g>
           </svg>
         </div>
         <figcaption class="portrait-name" data-bind="groomName">Ismail Ali Shah</figcaption>
@@ -189,19 +163,12 @@
       <div class="crest" aria-hidden="true">
         <svg class="crest-ring" viewBox="0 0 200 200"><use href="#crest-ring"/></svg>
         <span class="crest-mono latin">I<span class="amp">&amp;</span>T</span>
-        <svg class="crest-flower" viewBox="0 0 40 40">
-          <g fill="none" stroke="currentColor" stroke-width="1.2">
-            <circle cx="20" cy="20" r="4"/>
-            <path d="M20 16c0-6 4-8 8-9-1 5-3 8-8 9zM20 24c0 6-4 8-8 9 1-5 3-8 8-9z"/>
-            <path d="M16 20c-6 0-8-4-9-8 5 1 8 3 9 8zM24 20c6 0 8 4 9 8-5-1-8-3-9-8z"/>
-          </g>
-        </svg>
       </div>
 
       <figure class="portrait portrait--bride">
         <div class="portrait-frame">
           <img class="portrait-img" src="assets/images/bride.png" alt="Taslima Khatun — the bride" />
-          <svg class="portrait-svg" viewBox="0 0 300 400" role="img" aria-label="Stylised gold portrait of the bride">
+          <svg class="portrait-svg" viewBox="0 0 300 400" role="img" aria-label="Gold line art portrait of the bride">
             <defs><clipPath id="brideArch"><path d="M40 366V150a110 110 0 0 1 220 0v216z"/></clipPath></defs>
             <path class="arch-fill" d="M40 366V150a110 110 0 0 1 220 0v216z"/>
             <g clip-path="url(#brideArch)">
@@ -226,10 +193,6 @@
             </g>
             <path class="arch-line" d="M40 366V150a110 110 0 0 1 220 0v216"/>
             <path class="arch-line arch-line--in" d="M50 366V152a100 100 0 0 1 200 0v214"/>
-            <g class="sprig">
-              <path d="M52 372q-14-8-24-2M52 372q-4-16-16-20"/>
-              <path d="M248 372q14-8 24-2M248 372q4-16 16-20"/>
-            </g>
           </svg>
         </div>
         <figcaption class="portrait-name" data-bind="brideName">Taslima Khatun</figcaption>
@@ -263,9 +226,7 @@
   <span class="twinkle t4" aria-hidden="true"></span>
 </section>
 
-<!-- =====================================================
-     PAGE 2 — INVITATION CARD  |  PAGE 3 — WEDDING FILM
-     ===================================================== -->
+<!-- ============ PAGE 2 · CARD  |  PAGE 3 · FILM ============ -->
 <main class="invitation" id="invitation">
 
   <section class="card-section">
@@ -346,7 +307,7 @@
     </article>
   </section>
 
-  <!-- ================= PAGE 3 — CINEMATIC FILM ================= -->
+  <!-- ============ PAGE 3 · CINEMATIC FILM ============ -->
   <section class="film-section" id="film">
     <header class="film-head reveal">
       <h2 class="film-title glow-text" data-i18n="filmTitle">বিবাহ চলচ্চিত্র</h2>
@@ -357,8 +318,8 @@
     <div class="film-shell reveal" id="filmShell">
       <div class="film-stage" id="filmStage">
 
-        <!-- ===== SCENE 0 · TITLE CARD ===== -->
-        <div class="scene scene--title is-active" data-scene="0">
+        <!-- SCENE 0 · TITLE -->
+        <div class="scene is-active" data-scene="0">
           <div class="scene-plane" data-cam="in">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
               <rect width="1600" height="900" fill="url(#gNight)"/>
@@ -379,7 +340,7 @@
           </div>
         </div>
 
-        <!-- ===== SCENE 1 · BRIDE'S ENTRANCE ===== -->
+        <!-- SCENE 1 · BRIDE -->
         <div class="scene" data-scene="1">
           <div class="scene-plane" data-cam="right">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -409,7 +370,7 @@
           </div>
         </div>
 
-        <!-- ===== SCENE 2 · GROOM'S ENTRANCE ===== -->
+        <!-- SCENE 2 · GROOM -->
         <div class="scene" data-scene="2">
           <div class="scene-plane" data-cam="left">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -438,7 +399,7 @@
           </div>
         </div>
 
-        <!-- ===== SCENE 3 · THE MANDAP ===== -->
+        <!-- SCENE 3 · MANDAP -->
         <div class="scene" data-scene="3">
           <div class="scene-plane" data-cam="in">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -465,10 +426,6 @@
                 <ellipse cx="800" cy="806" rx="16" ry="34"/>
                 <ellipse cx="800" cy="806" rx="42" ry="70" opacity=".22" filter="url(#fDof)"/>
               </g>
-              <g class="fig" opacity=".7">
-                <use href="#sil-guest" x="430" y="640" width="118" height="290"/>
-                <use href="#sil-guest" x="1050" y="640" width="118" height="290"/>
-              </g>
               <g fill="url(#gBokeh)" filter="url(#fDof)">
                 <circle cx="260" cy="260" r="150"/><circle cx="1350" cy="240" r="160"/>
               </g>
@@ -476,7 +433,7 @@
           </div>
         </div>
 
-        <!-- ===== SCENE 4 · MALA BODOL ===== -->
+        <!-- SCENE 4 · MALA -->
         <div class="scene" data-scene="4">
           <div class="scene-plane" data-cam="in-strong">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -503,7 +460,7 @@
           </div>
         </div>
 
-        <!-- ===== SCENE 5 · NIKAH / VOWS ===== -->
+        <!-- SCENE 5 · VOWS -->
         <div class="scene" data-scene="5">
           <div class="scene-plane" data-cam="out">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -521,7 +478,6 @@
               </g>
               <g fill="#fff6df" opacity=".92">
                 <rect x="700" y="770" width="120" height="20" rx="4"/>
-                <path d="M720 776h80M720 784h60" stroke="#b8933f" stroke-width="1.6" opacity=".7"/>
               </g>
               <g class="flame" fill="#ffbb63">
                 <ellipse cx="1080" cy="740" rx="10" ry="22"/>
@@ -534,7 +490,7 @@
           </div>
         </div>
 
-        <!-- ===== SCENE 6 · FAMILY BLESSINGS ===== -->
+        <!-- SCENE 6 · BLESSINGS -->
         <div class="scene" data-scene="6">
           <div class="scene-plane" data-cam="left">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -560,7 +516,7 @@
           </div>
         </div>
 
-        <!-- ===== SCENE 7 · WALIMA RECEPTION ===== -->
+        <!-- SCENE 7 · WALIMA -->
         <div class="scene" data-scene="7">
           <div class="scene-plane" data-cam="in">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -583,10 +539,6 @@
               <g stroke="#d9b274" stroke-opacity=".5" stroke-width="4" fill="#3a1015">
                 <path d="M330 780h1080"/><path d="M370 794v90M1370 794v90"/>
               </g>
-              <g fill="#3a1015" opacity=".8">
-                <rect x="420" y="700" width="220" height="14" rx="6"/>
-                <rect x="960" y="700" width="220" height="14" rx="6"/>
-              </g>
               <g class="fig" opacity=".55">
                 <use href="#sil-guest" x="300" y="620" width="130" height="300"/>
                 <use href="#sil-guest" x="1180" y="620" width="130" height="300"/>
@@ -598,16 +550,15 @@
           </div>
         </div>
 
-        <!-- ===== SCENE 8 · FOREVER ===== -->
+        <!-- SCENE 8 · FOREVER -->
         <div class="scene" data-scene="8">
           <div class="scene-plane" data-cam="out">
             <svg class="art" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
               <rect width="1600" height="900" fill="url(#gNight)"/>
-              <g class="stars" fill="#fff3d4">
+              <g fill="#fff3d4">
                 <circle cx="180" cy="120" r="3"/><circle cx="320" cy="200" r="2.2"/><circle cx="470" cy="90" r="2.8"/>
                 <circle cx="640" cy="170" r="2"/><circle cx="900" cy="110" r="2.6"/><circle cx="1080" cy="200" r="2.2"/>
                 <circle cx="1240" cy="100" r="3"/><circle cx="1420" cy="190" r="2"/><circle cx="760" cy="70" r="2.4"/>
-                <circle cx="250" cy="320" r="1.8"/><circle cx="1350" cy="330" r="1.8"/>
               </g>
               <circle cx="800" cy="300" r="120" fill="url(#gSpot)" opacity=".55"/>
               <text x="800" y="330" text-anchor="middle" font-family="Cormorant Garamond, serif"
@@ -626,7 +577,6 @@
           </div>
         </div>
 
-        <!-- ===== CINEMATIC OVERLAYS ===== -->
         <canvas class="film-fx" id="filmFx" aria-hidden="true"></canvas>
         <div class="film-grain" aria-hidden="true"></div>
         <div class="film-leak" aria-hidden="true"></div>
@@ -635,7 +585,6 @@
         <p class="film-subtitle" id="filmSubtitle" aria-live="polite"></p>
       </div>
 
-      <!-- ===== CONTROLS ===== -->
       <div class="film-controls" id="filmControls">
         <button type="button" class="fc-btn" id="filmPlay" aria-label="Play film" aria-pressed="false">
           <svg class="ico ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
@@ -664,7 +613,6 @@
   </footer>
 </main>
 
-<!-- ============ FLOATING MUSIC DOCK ============ -->
 <div class="music-dock glow-pulse" id="musicDock">
   <button type="button" class="dock-btn" id="musicToggle" aria-label="Play music" aria-pressed="false">
     <svg class="ico ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
