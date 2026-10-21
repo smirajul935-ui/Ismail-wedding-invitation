@@ -1,12 +1,11 @@
 /* =========================================================
    MODERN LUXURY WEDDING INVITATION
-   Vanilla JS · no dependencies · GitHub Pages friendly
    ========================================================= */
 (function () {
   'use strict';
 
   /* =========================================================
-     1. ⚙️ CONFIG — edit everything here
+     1. ⚙️ CONFIG — sirf yahan edit karo
      ========================================================= */
   const CONFIG = {
     groomName: 'Ismail Ali Shah',
@@ -23,7 +22,6 @@
     weddingVenue: 'Shyam Sarthak Palace',
     venueAddress: 'Dihiramnagar, Daspur, Paschim Medinipur, Pin 721212',
 
-    /* Countdown target (ISO). Set to null to hide. */
     countdownISO: '2026-11-01T12:00:00+05:30',
 
     invitationMessage: {
@@ -33,22 +31,22 @@
 
     programme: [
       {
-        title: { bn: 'গায়ে হলুদ', hi: 'गाये हल्दी' },
-        note:  { bn: 'হলুদ অনুষ্ঠান', hi: 'हल्दी समारोह' },
-        date:  { bn: 'শুক্রবার, ৩০ অক্টোবর ২০২৬', hi: 'शुक्रवार, ३० अक्टूबर २०२६' },
-        bangla:{ bn: '১২ কার্তিক ১৪৩৩', hi: '१२ कार्तिक १४३३' }
+        title:  { bn: 'গায়ে হলুদ', hi: 'गाये हल्दी' },
+        note:   { bn: 'হলুদ অনুষ্ঠান', hi: 'हल्दी समारोह' },
+        date:   { bn: 'শুক্রবার, ৩০ অক্টোবর ২০২৬', hi: 'शुक्रवार, ३० अक्टूबर २०२६' },
+        bangla: { bn: '১২ কার্তিক ১৪৩৩', hi: '१२ कार्तिक १४३३' }
       },
       {
-        title: { bn: 'শাদী মুবারক', hi: 'शादी मुबारक' },
-        note:  { bn: 'বিবাহ অনুষ্ঠান', hi: 'विवाह समारोह' },
-        date:  { bn: 'রবিবার, ০১ নভেম্বর ২০২৬', hi: 'रविवार, ०१ नवंबर २०२६' },
-        bangla:{ bn: '১৪ কার্তিক ১৪৩৩', hi: '१४ कार्तिक १४३३' }
+        title:  { bn: 'শাদী মুবারক', hi: 'शादी मुबारक' },
+        note:   { bn: 'বিবাহ অনুষ্ঠান', hi: 'विवाह समारोह' },
+        date:   { bn: 'রবিবার, ০১ নভেম্বর ২০২৬', hi: 'रविवार, ०१ नवंबर २०२६' },
+        bangla: { bn: '১৪ কার্তিক ১৪৩৩', hi: '१४ कार्तिक १४३३' }
       },
       {
-        title: { bn: 'ওয়ালিমা', hi: 'वलीमा' },
-        note:  { bn: 'প্রীতিভোজ · বিকেল', hi: 'प्रीतिभोज · दोपहर बाद' },
-        date:  { bn: 'সোমবার, ০২ নভেম্বর ২০২৬', hi: 'सोमवार, ०२ नवंबर २०२६' },
-        bangla:{ bn: '১৫ কার্তিক ১৪৩৩', hi: '१५ कार्तिक १४३३' }
+        title:  { bn: 'ওয়ালিমা', hi: 'वलीमा' },
+        note:   { bn: 'প্রীতিভোজ · বিকেল', hi: 'प्रीतिभोज · दोपहर बाद' },
+        date:   { bn: 'সোমবার, ০২ নভেম্বর ২০২৬', hi: 'सोमवार, ०२ नवंबर २०२६' },
+        bangla: { bn: '১৫ কার্তিক ১৪৩৩', hi: '१५ कार्तिक १४३३' }
       }
     ],
 
@@ -86,18 +84,19 @@
       musicPlay: 'সংগীত চালু করুন', musicPause: 'সংগীত বন্ধ করুন',
       musicMute: 'শব্দ বন্ধ করুন', musicUnmute: 'শব্দ চালু করুন',
       musicMissing: 'সংগীত ফাইল পাওয়া যায়নি',
+      musicTap: 'সংগীত চালু করতে স্পর্শ করুন',
       filmPlay: 'চলচ্চিত্র চালু করুন', filmPause: 'চলচ্চিত্র থামান', filmReplay: 'আবার দেখুন',
       filmFull: 'পূর্ণ পর্দা', toTop: 'উপরে যান',
       scenes: [
-        { loc: 'শুভ সূচনা', lat: 'The Wedding Film' },
-        { loc: 'কনের প্রবেশ', lat: 'The Bride’s Entrance' },
-        { loc: 'বরের প্রবেশ', lat: 'The Groom’s Entrance' },
-        { loc: 'মণ্ডপ সাজানো', lat: 'The Mandap' },
-        { loc: 'মালাবদল', lat: 'The Garland Ceremony' },
-        { loc: 'আকদ ও প্রতিজ্ঞা', lat: 'The Vows' },
-        { loc: 'পরিবারের আশীর্বাদ', lat: 'Family Blessings' },
-        { loc: 'ওয়ালিমা সংবর্ধনা', lat: 'The Walima' },
-        { loc: 'চিরকাল একসাথে', lat: 'Forever Together' }
+        { loc: 'শুভ সূচনা' },
+        { loc: 'কনের প্রবেশ' },
+        { loc: 'বরের প্রবেশ' },
+        { loc: 'মণ্ডপ সাজানো' },
+        { loc: 'মালাবদল' },
+        { loc: 'আকদ ও প্রতিজ্ঞা' },
+        { loc: 'পরিবারের আশীর্বাদ' },
+        { loc: 'ওয়ালিমা সংবর্ধনা' },
+        { loc: 'চিরকাল একসাথে' }
       ]
     },
     hi: {
@@ -125,18 +124,19 @@
       musicPlay: 'संगीत चलाएँ', musicPause: 'संगीत रोकें',
       musicMute: 'आवाज़ बंद करें', musicUnmute: 'आवाज़ चालू करें',
       musicMissing: 'संगीत फ़ाइल उपलब्ध नहीं है',
+      musicTap: 'संगीत चालू करने के लिए टैप करें',
       filmPlay: 'फ़िल्म चलाएँ', filmPause: 'फ़िल्म रोकें', filmReplay: 'फिर से देखें',
       filmFull: 'पूर्ण स्क्रीन', toTop: 'ऊपर जाएँ',
       scenes: [
-        { loc: 'शुभ आरंभ', lat: 'The Wedding Film' },
-        { loc: 'दुल्हन का आगमन', lat: 'The Bride’s Entrance' },
-        { loc: 'दूल्हे का आगमन', lat: 'The Groom’s Entrance' },
-        { loc: 'मंडप', lat: 'The Mandap' },
-        { loc: 'जयमाला', lat: 'The Garland Ceremony' },
-        { loc: 'वचन', lat: 'The Vows' },
-        { loc: 'परिवार का आशीर्वाद', lat: 'Family Blessings' },
-        { loc: 'वलीमा', lat: 'The Walima' },
-        { loc: 'सदा के लिए साथ', lat: 'Forever Together' }
+        { loc: 'शुभ आरंभ' },
+        { loc: 'दुल्हन का आगमन' },
+        { loc: 'दूल्हे का आगमन' },
+        { loc: 'मंडप' },
+        { loc: 'जयमाला' },
+        { loc: 'वचन' },
+        { loc: 'परिवार का आशीर्वाद' },
+        { loc: 'वलीमा' },
+        { loc: 'सदा के लिए साथ' }
       ]
     }
   };
@@ -144,8 +144,8 @@
   /* =========================================================
      3. HELPERS / STATE
      ========================================================= */
-  const $  = (s, r) => (r || document).querySelector(s);
-  const $$ = (s, r) => Array.prototype.slice.call((r || document).querySelectorAll(s));
+  const $  = function (s, r) { return (r || document).querySelector(s); };
+  const $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const state = {
@@ -182,7 +182,7 @@
     renderProgramme();
     renderMessage();
     updateMusicLabels();
-    updateFilmLabels();
+    Film.refreshLabels();
     Film.refreshCaption();
 
 
@@ -193,10 +193,15 @@
     });
 
     if (countdownTimer) renderCountdown();
+
+    const hint = document.getElementById('musicHint');
+    if (hint && hint.classList.contains('is-on')) {
+      hint.innerHTML = '<span class="mh-ico">♪</span><span class="mh-txt">' + t('musicTap') + '</span>';
+    }
   }
 
   /* =========================================================
-     5. RENDER FROM CONFIG
+     5. RENDER
      ========================================================= */
   function bind(key, value) {
 
@@ -214,9 +219,7 @@
     bind('brideAddress', CONFIG.brideAddress);
     bind('weddingVenue', CONFIG.weddingVenue);
     bind('venueAddress', CONFIG.venueAddress);
-
     if (els.welDate) els.welDate.textContent = CONFIG.weddingDate || '';
-
     const card = $('#invitationCard');
     if (card) card.setAttribute('aria-label', CONFIG.groomName + ' & ' + CONFIG.brideName + ' — wedding invitation');
   }
@@ -295,7 +298,6 @@
     }
 
     const diff = target.getTime() - Date.now();
-
     if (diff <= 0) {
       grid.hidden = true;
       note.hidden = false;
@@ -406,38 +408,54 @@
   }
 
   /* =========================================================
-     8. MUSIC (single instance, first-touch autostart)
+     8. MUSIC — auto try + first touch par pakka play
      ========================================================= */
   const Music = {
     audio: null,
     failed: false,
+    hintShown: false,
 
     init: function () {
-      if (this.audio) return;
-      const a = new Audio();
+      if (this.audio) return this.audio;
+
+      const a = document.createElement('audio');
+      a.id = 'bgMusic';
       a.src = CONFIG.musicFile;
       a.loop = true;
       a.preload = 'auto';
       a.volume = CONFIG.musicVolume;
       a.setAttribute('playsinline', '');
+      a.style.display = 'none';
+      document.body.appendChild(a);
 
       const self = this;
-      a.addEventListener('error', function () { self.markUnavailable(); });
-      a.addEventListener('play', function () { self.sync(true); });
+
+      a.addEventListener('error', function () {
+        console.warn('[MUSIC] load failed ->', CONFIG.musicFile, '| code:', a.error && a.error.code);
+        self.markUnavailable();
+      });
+
+      a.addEventListener('loadeddata', function () {
+        console.log('[MUSIC] ready ✅', CONFIG.musicFile);
+      });
+
+      a.addEventListener('play',  function () { self.sync(true); });
       a.addEventListener('pause', function () { self.sync(false); });
       a.addEventListener('volumechange', updateMusicLabels);
 
       this.audio = a;
+      return a;
     },
 
     markUnavailable: function () {
       if (!state.musicAvailable) return;
       state.musicAvailable = false;
       this.failed = true;
-      if (els.musicDock) els.musicDock.setAttribute('data-state', 'off');
+      if (els.musicDock)   els.musicDock.setAttribute('data-state', 'off');
       if (els.musicToggle) els.musicToggle.setAttribute('aria-disabled', 'true');
-      if (els.musicMute) els.musicMute.setAttribute('aria-disabled', 'true');
-      if (els.musicLabel) els.musicLabel.textContent = t('musicMissing');
+      if (els.musicMute)   els.musicMute.setAttribute('aria-disabled', 'true');
+      if (els.musicLabel)  els.musicLabel.textContent = t('musicMissing');
+      toast(t('musicMissing'));
     },
 
     play: function () {
@@ -447,9 +465,18 @@
 
       const self = this;
       const p = this.audio.play();
+
       if (p && typeof p.then === 'function') {
-        return p.then(function () { self.sync(true); return true; })
-                .catch(function () { self.sync(false); return false; });
+        return p.then(function () {
+          self.sync(true);
+          self.hideHint();
+          return true;
+        }).catch(function (err) {
+          console.warn('[MUSIC] blocked ->', err && err.name);
+          self.sync(false);
+          self.showHint();
+          return false;
+        });
       }
       this.sync(true);
       return Promise.resolve(true);
@@ -483,7 +510,36 @@
     sync: function (isPlaying) {
       if (els.musicDock) els.musicDock.classList.toggle('is-playing', !!isPlaying);
       if (els.musicToggle) els.musicToggle.setAttribute('aria-pressed', isPlaying ? 'true' : 'false');
+      if (isPlaying) this.hideHint();
       updateMusicLabels();
+    },
+
+    showHint: function () {
+      if (this.hintShown || !state.musicAvailable) return;
+      this.hintShown = true;
+      if (els.musicDock) els.musicDock.classList.add('is-attention');
+
+      let hint = document.getElementById('musicHint');
+      if (!hint) {
+        hint = document.createElement('button');
+        hint.id = 'musicHint';
+        hint.type = 'button';
+        hint.className = 'music-hint';
+        document.body.appendChild(hint);
+        hint.addEventListener('click', function (ev) {
+          ev.stopPropagation();
+          state.musicWanted = true;
+          Music.play();
+        });
+      }
+      hint.innerHTML = '<span class="mh-ico">♪</span><span class="mh-txt">' + t('musicTap') + '</span>';
+      hint.classList.add('is-on');
+    },
+
+    hideHint: function () {
+      const hint = document.getElementById('musicHint');
+      if (hint) hint.classList.remove('is-on');
+      if (els.musicDock) els.musicDock.classList.remove('is-attention');
     }
   };
 
@@ -496,13 +552,22 @@
       els.musicMute.setAttribute('aria-pressed', muted ? 'true' : 'false');
       els.musicMute.setAttribute('aria-label', muted ? t('musicUnmute') : t('musicMute'));
     }
-    if (els.musicDock) els.musicDock.classList.toggle('is-muted', Music.audio ? !!Music.audio.muted : false);
+    if (els.musicDock) {
+      els.musicDock.classList.toggle('is-muted', Music.audio ? !!Music.audio.muted : false);
+    }
   }
 
-  /* ---- first touch / click anywhere starts the song ---- */
+  /* page load par turant try */
+  function tryAutoplayMusic() {
+    if (!state.musicWanted || !state.musicAvailable) return;
+    Music.init();
+    Music.play();
+  }
+
+  /* pehle touch/click/key par pakka play */
   function armFirstGestureMusic() {
     let fired = false;
-    const events = ['pointerdown', 'touchstart', 'mousedown', 'click', 'keydown'];
+    const events = ['pointerdown', 'touchstart', 'touchend', 'mousedown', 'click', 'keydown'];
 
     function cleanup() {
       events.forEach(function (e) { window.removeEventListener(e, handler, true); });
@@ -513,14 +578,8 @@
       fired = true;
       cleanup();
       if (!state.musicWanted || !state.musicAvailable) return;
-
       Music.init();
-      Music.play().then(function (ok) {
-        if (!ok && els.musicDock) {
-          els.musicDock.classList.add('is-attention');
-          els.musicDock.setAttribute('data-hint', 'tap');
-        }
-      });
+      Music.play();
     }
 
     events.forEach(function (e) {
@@ -532,11 +591,10 @@
      9. CINEMATIC FILM ENGINE
      ========================================================= */
   const Film = (function () {
-    let stage, subtitle, controls, bar, fill, dots = [], scenes = [];
+    let stage, subtitle, controls, bar, fill, scenes = [], dots = [];
     let idx = 0, playing = false, ended = false;
     let elapsed = 0, last = 0, raf = null;
 
-    /* per-scene duration (ms) */
     const durations = [4200, 6200, 6200, 6800, 6200, 5600, 6200, 6600, 6400];
     const total = durations.reduce(function (a, b) { return a + b; }, 0);
 
@@ -577,7 +635,6 @@
         btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
         btn.setAttribute('aria-label', ended ? t('filmReplay') : (playing ? t('filmPause') : t('filmPlay')));
       }
-
       const count = document.getElementById('filmCount');
       if (count) count.textContent = (idx + 1) + ' / ' + scenes.length;
     }
@@ -620,18 +677,18 @@
       Music.duck(false);
     }
 
-    function goTo(i, keepPlaying) {
+    function goTo(i) {
       idx = Math.min(scenes.length - 1, Math.max(0, i));
       elapsed = 0;
       ended = false;
       setSubtitle(idx, true);
       applyState();
       progress();
-      if (!keepPlaying) { /* manual seek keeps current play state */ }
     }
 
     return {
       init: function () {
+        const self = this;
         stage = document.getElementById('filmStage');
         subtitle = document.getElementById('filmSubtitle');
         controls = document.getElementById('filmControls');
@@ -656,16 +713,18 @@
         progress();
 
         const btn = document.getElementById('filmPlay');
-        if (btn) btn.addEventListener('click', function () {
-          if (playing) this.pause();
-          else this.play(true);
-        }.bind(this));
+        if (btn) {
+          btn.addEventListener('click', function () {
+            if (playing) self.pause();
+            else self.play(true);
+          });
+        }
 
         const full = document.getElementById('filmFull');
         if (full) full.addEventListener('click', function () { toggleFullscreen(); });
 
         if (bar) {
-          const seek = function (ev) {
+          bar.addEventListener('click', function (ev) {
             const rect = bar.getBoundingClientRect();
             const x = ev.touches ? ev.touches[0].clientX : ev.clientX;
             const ratio = Math.min(1, Math.max(0, (x - rect.left) / rect.width));
@@ -673,25 +732,25 @@
             let i = 0;
             while (i < durations.length - 1 && targetMs >= cumulative(i + 1)) i++;
             goTo(i);
-          };
-          bar.addEventListener('click', seek);
+          });
           bar.addEventListener('keydown', function (ev) {
             if (ev.key === 'ArrowRight') { ev.preventDefault(); goTo(Math.min(scenes.length - 1, idx + 1)); }
             if (ev.key === 'ArrowLeft')  { ev.preventDefault(); goTo(Math.max(0, idx - 1)); }
           });
         }
 
-        /* auto-start once when the film scrolls into view */
         if ('IntersectionObserver' in window) {
           const io = new IntersectionObserver(function (entries) {
             entries.forEach(function (en) {
-              if (en.isIntersecting && !ended) { io.disconnect(); this.play(false); }
+              if (en.isIntersecting && !ended && !playing) {
+                io.disconnect();
+                self.play(false);
+              }
             });
-          }.bind(this), { threshold: 0.55 });
+          }, { threshold: 0.55 });
           io.observe(stage);
         }
 
-        /* particle overlay */
         initFilmFx();
       },
 
@@ -702,7 +761,6 @@
         last = 0;
         applyState();
         if (fromUser) Music.duck(true);
-        Music.duck(true);
         raf = requestAnimationFrame(tick);
       },
 
@@ -720,9 +778,6 @@
     };
   })();
 
-  function updateFilmLabels() { Film.refreshLabels(); }
-
-  /* ---------- film dust / sparkle overlay ---------- */
   function initFilmFx() {
     const canvas = document.getElementById('filmFx');
     const stage = document.getElementById('filmStage');
@@ -943,7 +998,6 @@
       els.musicToggle.addEventListener('click', function () {
         Music.init();
         Music.toggle();
-        els.musicDock.classList.remove('is-attention');
       });
     }
 
@@ -1004,8 +1058,8 @@
     initToTop();
     bindEvents();
 
-    Music.init();
-    armFirstGestureMusic();
+    tryAutoplayMusic();       /* load hote hi try */
+    armFirstGestureMusic();   /* pehle touch par pakka */
 
     observeReveals();
     hidePreloader();
