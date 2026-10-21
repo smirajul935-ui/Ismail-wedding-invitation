@@ -1,29 +1,24 @@
-# Modern Luxury Wedding Invitation Website
+# Modern Luxury Wedding Invitation — Glow Edition
 
-A premium, mobile-first, **static** wedding invitation website built with
-plain **HTML + CSS + vanilla JavaScript** — no backend, no build tools,
-no paid APIs. Ready for **GitHub Pages**.
+Static, mobile-first Bengali/Hindi wedding invitation built with **HTML + CSS + vanilla JS**.
+No backend, no build tools, no API keys. Perfect for **GitHub Pages**.
 
-Wedding of **Ismail Ali Shah & Taslima Khatun** · 01 November 2026 ·
-Shyam Sarthak Palace, Dehiramnagor, Daspur, Paschim Medinipur.
-
----
-
-## Features
-
-- **Bilingual** interface — বাংলা / हिन्दी toggle (names, dates and venue are preserved)
-- **Welcome screen** with code-generated SVG portraits, monogram crest and a premium
-  "open invitation" animation
-- **Luxury invitation card** with paper texture, gold borders, floral corners,
-  programme, venue, live countdown, print/PDF, copy-address and back-to-top
-- **Cinematic wedding film section** — a code-generated 6-scene animated sequence
-  (SVG + CSS) that automatically switches to a real MP4 if one is provided
-- **Single background-music instance** with a floating play/pause + mute dock
-- Floating flower petals (canvas), sparkles, reveal animations
-- Full **reduced-motion** support, keyboard accessible, ARIA labelled
-- Print stylesheet that prints **only** the invitation card
+**Wedding:** Ismail Ali Shah & Taslima Khatun · 01 November 2026
+**Venue:** Shyam Sarthak Palace, Dehiramnagor, Daspur, Paschim Medinipur
 
 ---
 
-## File structure
+## What's new in this version
+
+| Change | Detail |
+|---|---|
+| 🎵 Song on first touch | Music starts the **moment the visitor touches/clicks anywhere** on the page — no need to find the button |
+| 🎬 Real-looking film | 9-scene cinematic sequence with camera moves, film grain, light leaks, dust particles, letterbox bars, glowing subtitles |
+| ✨ Glow design | Pulsing gold glow on card, buttons, crest, ornaments, countdown and music dock |
+| 🖨️ Print removed | The "Print / Save as PDF" button is gone |
+| 🚫 No video upload needed | The film is generated entirely by code |
+
+---
+
+## Files
 
